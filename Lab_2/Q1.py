@@ -7,7 +7,7 @@ class Stack:
     def push(self, value):
         #increment the size of data using append()
         self.data.append(0)
-        self.top +-1
+        self.top +=1
         self.data[self.top] = value
         
     def pop(self):
@@ -25,19 +25,17 @@ class Stack:
 
     def printStack(self):
         print(self.data)
-    
-    def invert(self):
-        value = self.data
-        first = 0
-        last = 0
-        index = 0
-        for x in value[::-1]:
-            first = x
-            last = value[index]
-            x = last
-            value[index] = first
-            index += 1
 
+    def invert(self):
+        temp=[]
+        index=0
+        while not self.isEmpty():
+            temp.append(self.pop())
+        for x in temp:
+            self.push(x)
+            
+            
+        
 array = input("Enter a list of numbers separated by commas:\n")
 array = [int(x) for x in array.split(",")]
         
