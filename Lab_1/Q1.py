@@ -18,4 +18,5 @@ array = [int(x) for x in array.split(",")]
 
 largestIndex = findLargestIndex(array)
 
-print ("\nThe largest number is %d at index %d" %(array[largestIndex], largestIndex))
+print ("\nThe largest number is %d at index %d"
+         %(array[largestIndex], largestIndex))

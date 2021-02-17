@@ -28,7 +28,6 @@ class Stack:
 
     def invert(self):
         temp=[]
-        index=0
         while not self.isEmpty():
             temp.append(self.pop())
         for x in temp:
