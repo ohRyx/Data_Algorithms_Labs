@@ -5,8 +5,8 @@ def MergeSort(arr):
         return arr
     
     mid = size // 2
-    left = arr[0:mid]
-    right = arr[mid:size]
+    left = arr[:mid]
+    right = arr[mid:]
 
     MergeSort(left)
     MergeSort(right)
