@@ -5,6 +5,13 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "type": "java",
+            "name": "Launch Q2",
+            "request": "launch",
+            "mainClass": "Q2",
+            "projectName": "Data_Algorithms_Labs_c146fd42"
+        },
+        {
             "name": "Python: Current File",
             "type": "python",
             "request": "launch",
