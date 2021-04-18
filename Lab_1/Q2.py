@@ -8,7 +8,6 @@ def reverse(a):
     for x in a[::-1]:
         first = x
         last = a[index]
-        x = last
         a[index] = first
         index +=1
 

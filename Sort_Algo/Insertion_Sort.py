@@ -1,13 +1,10 @@
-def InsertionSort(list):
-    for index in range(1, len(list)):
-        current = list[index]
-        position = index -1
+def InsertionSort(array):
+    for x in range(1, len(array)):
+        value_to_sort = array[x]
 
-        while list[position] > current and position >= 0:
-            list[position + 1] = list[position]
-            position = position -1
-        
-        list[position + 1] = current
+        while array[x-1] > value_to_sort and x>0:
+            array[x], array[x-1] = array[x-1], array[x]
+            x = x-1
 
 aList = [5,2,6,7,1]
 InsertionSort(aList)

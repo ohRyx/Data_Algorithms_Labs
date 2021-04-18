@@ -1,42 +1,36 @@
-def MergeSort(arr):
-    size = len(arr)
+def MergeSort(array):
+    if len(array) > 1:
+        mid = len(array) //2
+        left = array[:mid]
+        right = array[mid:]
+        
+        # Recursion
+        MergeSort(left)
+        MergeSort(right)
 
-    if size == 1:
-        return arr
-    
-    mid = size // 2
-    left = arr[:mid]
-    right = arr[mid:]
+        # Merge
+        l = 0 # Left Array Index
+        r = 0 # Right Array Index
+        i = 0 # Merged Array Index
 
-    MergeSort(left)
-    MergeSort(right)
-    arr = merge(left, right)
-    print(arr)
-
-    return arr
-    
-
-def merge(aList, bList):
-    cList = []
-    sizeA = len(aList)
-    sizeB = len(bList)
-
-    indexA = indexB = 0
-    while indexA < sizeA and indexB < sizeB:
-        if alist[indexA] <= bList[indexB]:
-            cList.append(alist[indexA])
-            indexA += 1
-        else:
-            cList.append(bList[indexB])
-            indexB +=1
-    
-    for i in range(indexA, sizeA):
-        cList.append(aList[i])
-
-    for i in range(indexB, sizeB):
-        cList.append(bList[i])
-    
-    return cList
+        while l < len(left) and r < len(right):
+            if left[l] < right[r]:
+                array[i] = left[l]
+                l +=1
+            else:
+                array[i] = right[r]
+                r +=1
+            i +=1
+        
+        while l < len(left):
+            array[i] = left[l]
+            l +=1
+            i +=1
+        
+        while r < len(right):
+            array[i] = right[r]
+            r += 1
+            i += 1
 
 
 alist = [12,6,4,98,76,54]
